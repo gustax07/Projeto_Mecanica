@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace mecanica.Model
 {
-    internal class Cargos
+    internal class Banco
     {
-        public int Id { get; set; }
-        public string Nome_cargos { get; set; }
     }
 }
