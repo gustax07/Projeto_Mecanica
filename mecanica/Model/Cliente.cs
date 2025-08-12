@@ -13,8 +13,8 @@ namespace mecanica.Model
         public string Telefone_temporario { get; set; }
         public string Cpf {  get; set; }
         public string Rg {  get; set; }
-        public int id_veiculo_fk { get; set; }
-        public int id_servicos_fk { get; set; }
-        public int id_orcamento_fk { get; set; }
+        public int Id_veiculo_fk { get; set; }
+        public int Id_servicos_fk { get; set; }
+        public int Id_orcamento_fk { get; set; }
     }
 }
