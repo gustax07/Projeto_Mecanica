@@ -20,7 +20,7 @@ namespace mecanica.Model
 
         public bool Cadastrar()
         {
-            string comando = "INSERT INTO funcionario (Nome_completo, Email, senha, data_contratacao) " +
+            string comando = "INSERT INTO funcionario (nome_completo, email, senha, data_contratacao) " +
                 "VALUES (@nome_completo, @email, @data_contratacao, @senha)";
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
@@ -105,7 +105,7 @@ namespace mecanica.Model
             public DataTable Listar()
         {
 
-            string comando = "SELECT id, nome_completo, email FROM funcionario";
+            string comando = "SELECT id, nome_completo, email, data_contratacao FROM funcionario";
 
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
