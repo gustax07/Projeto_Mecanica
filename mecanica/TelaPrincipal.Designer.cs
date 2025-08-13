@@ -68,7 +68,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = SystemColors.WindowText;
+            pictureBox2.BackColor = Color.White;
             pictureBox2.Image = Properties.Resources.mechanic__1_;
             pictureBox2.Location = new Point(12, 85);
             pictureBox2.Name = "pictureBox2";
@@ -100,7 +100,7 @@
             btnHistoricoPedidos.Name = "btnHistoricoPedidos";
             btnHistoricoPedidos.Size = new Size(216, 61);
             btnHistoricoPedidos.TabIndex = 5;
-            btnHistoricoPedidos.Text = "o";
+            btnHistoricoPedidos.Text = "Histórico de Pedidos";
             btnHistoricoPedidos.UseVisualStyleBackColor = false;
             // 
             // btnHistoricoCompras
