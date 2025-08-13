@@ -34,7 +34,7 @@
             btnComprarpeca = new Button();
             btnHistoricoPedidos = new Button();
             btnHistoricoCompras = new Button();
-            btnCadastrarmecanicos = new Button();
+            btnCadastrarfuncionarios = new Button();
             btnSimularPintura = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -100,7 +100,7 @@
             btnHistoricoPedidos.Name = "btnHistoricoPedidos";
             btnHistoricoPedidos.Size = new Size(216, 61);
             btnHistoricoPedidos.TabIndex = 5;
-            btnHistoricoPedidos.Text = "Histórico de Pedidos";
+            btnHistoricoPedidos.Text = "o";
             btnHistoricoPedidos.UseVisualStyleBackColor = false;
             // 
             // btnHistoricoCompras
@@ -116,18 +116,19 @@
             btnHistoricoCompras.Text = "Histórico de Compras ";
             btnHistoricoCompras.UseVisualStyleBackColor = false;
             // 
-            // btnCadastrarmecanicos
+            // btnCadastrarfuncionarios
             // 
-            btnCadastrarmecanicos.BackColor = Color.Black;
-            btnCadastrarmecanicos.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCadastrarmecanicos.ForeColor = Color.White;
-            btnCadastrarmecanicos.Image = Properties.Resources._2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor;
-            btnCadastrarmecanicos.Location = new Point(509, 85);
-            btnCadastrarmecanicos.Name = "btnCadastrarmecanicos";
-            btnCadastrarmecanicos.Size = new Size(216, 61);
-            btnCadastrarmecanicos.TabIndex = 7;
-            btnCadastrarmecanicos.Text = "Cadastrar Mecânicos";
-            btnCadastrarmecanicos.UseVisualStyleBackColor = false;
+            btnCadastrarfuncionarios.BackColor = Color.Black;
+            btnCadastrarfuncionarios.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCadastrarfuncionarios.ForeColor = Color.White;
+            btnCadastrarfuncionarios.Image = Properties.Resources._2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor;
+            btnCadastrarfuncionarios.Location = new Point(509, 85);
+            btnCadastrarfuncionarios.Name = "btnCadastrarfuncionarios";
+            btnCadastrarfuncionarios.Size = new Size(216, 61);
+            btnCadastrarfuncionarios.TabIndex = 7;
+            btnCadastrarfuncionarios.Text = "Cadastrar Funcionarios";
+            btnCadastrarfuncionarios.UseVisualStyleBackColor = false;
+            btnCadastrarfuncionarios.Click += btnCadastrarfuncionarios_Click;
             // 
             // btnSimularPintura
             // 
@@ -149,7 +150,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 382);
             Controls.Add(btnSimularPintura);
-            Controls.Add(btnCadastrarmecanicos);
+            Controls.Add(btnCadastrarfuncionarios);
             Controls.Add(btnHistoricoCompras);
             Controls.Add(btnHistoricoPedidos);
             Controls.Add(btnComprarpeca);
@@ -170,7 +171,7 @@
         private Button btnComprarpeca;
         private Button btnHistoricoPedidos;
         private Button btnHistoricoCompras;
-        private Button btnCadastrarmecanicos;
+        private Button btnCadastrarfuncionarios;
         private Button btnSimularPintura;
     }
 }

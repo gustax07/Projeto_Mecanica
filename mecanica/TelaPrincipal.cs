@@ -31,5 +31,15 @@ namespace mecanica
         {
 
         }
+
+        private void btnCadastrarfuncionarios_Click(object sender, EventArgs e)
+        {
+            //Abrir a tela Cadastrar Funcionarios
+            CadastroFunionarios cadastroFunionarios = new CadastroFunionarios();
+            cadastroFunionarios.Show();
+
+            //Fechar a tela anterior 
+            this.Hide();
+        }
     }
 }
