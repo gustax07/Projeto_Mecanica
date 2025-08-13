@@ -16,5 +16,20 @@ namespace mecanica
         {
             InitializeComponent();
         }
+
+        private void lblVeiculo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
