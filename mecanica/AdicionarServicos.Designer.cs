@@ -101,6 +101,7 @@
             btnAdicionar.TabIndex = 10;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // txbStatus
             // 

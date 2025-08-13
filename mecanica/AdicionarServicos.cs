@@ -31,5 +31,38 @@ namespace mecanica
         {
 
         }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            //Verificar se os campos foram preenchidos:
+            if (txbNome.Text == "")
+            {
+                MessageBox.Show("Informe o nome do serviço!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txbData.Text == "")
+            {
+                MessageBox.Show("Por favor, informe a data de entrega!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txbVeiculo.Text == "")
+            {
+                MessageBox.Show("Por favor, informe o veiculo!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(txbOrcamento.Text == "")
+            {
+                MessageBox.Show("Por favor, informe o orçamento!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txbStatus.Text == "")
+            {
+                MessageBox.Show("Por favor, informe o status!", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+       
+   }
+        
     }
 }
