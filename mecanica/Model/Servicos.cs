@@ -6,11 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using MySqlConnector;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace mecanica.Model
 {
     internal class Servicos
     {
+
         public int Id { get; set; }
         public string nomeServico { get; set; }
         public DataTable DataEntrega { get; set; }
@@ -97,5 +102,6 @@ namespace mecanica.Model
                 return false;
             }
         }
+
     }
 }
