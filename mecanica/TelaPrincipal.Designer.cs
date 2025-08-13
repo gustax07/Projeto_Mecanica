@@ -28,28 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pibTelaPrincipal = new PictureBox();
             lblTelaPrincipal = new Label();
             btnAdicionarservico = new Button();
             pictureBox2 = new PictureBox();
             btnComprarpeca = new Button();
             btnHistoricoPedidos = new Button();
             btnHistoricoCompras = new Button();
-            btnCadastrarmecanicos = new Button();
+            btnCadastrarfuncionarios = new Button();
             btnSimularPintura = new Button();
-            ((System.ComponentModel.ISupportInitialize)pibTelaPrincipal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // pibTelaPrincipal
-            // 
-            pibTelaPrincipal.Image = Properties.Resources._2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor;
-            pibTelaPrincipal.Location = new Point(-10, -4);
-            pibTelaPrincipal.Name = "pibTelaPrincipal";
-            pibTelaPrincipal.Size = new Size(820, 397);
-            pibTelaPrincipal.SizeMode = PictureBoxSizeMode.Zoom;
-            pibTelaPrincipal.TabIndex = 0;
-            pibTelaPrincipal.TabStop = false;
             // 
             // lblTelaPrincipal
             // 
@@ -76,10 +64,11 @@
             btnAdicionarservico.TabIndex = 2;
             btnAdicionarservico.Text = "Adicionar Serviços";
             btnAdicionarservico.UseVisualStyleBackColor = false;
+            btnAdicionarservico.Click += btnAdicionarservico_Click;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = SystemColors.WindowText;
+            pictureBox2.BackColor = Color.White;
             pictureBox2.Image = Properties.Resources.mechanic__1_;
             pictureBox2.Location = new Point(12, 85);
             pictureBox2.Name = "pictureBox2";
@@ -127,18 +116,19 @@
             btnHistoricoCompras.Text = "Histórico de Compras ";
             btnHistoricoCompras.UseVisualStyleBackColor = false;
             // 
-            // btnCadastrarmecanicos
+            // btnCadastrarfuncionarios
             // 
-            btnCadastrarmecanicos.BackColor = Color.Black;
-            btnCadastrarmecanicos.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCadastrarmecanicos.ForeColor = Color.White;
-            btnCadastrarmecanicos.Image = Properties.Resources._2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor;
-            btnCadastrarmecanicos.Location = new Point(509, 85);
-            btnCadastrarmecanicos.Name = "btnCadastrarmecanicos";
-            btnCadastrarmecanicos.Size = new Size(216, 61);
-            btnCadastrarmecanicos.TabIndex = 7;
-            btnCadastrarmecanicos.Text = "Cadastrar Mecânicos";
-            btnCadastrarmecanicos.UseVisualStyleBackColor = false;
+            btnCadastrarfuncionarios.BackColor = Color.Black;
+            btnCadastrarfuncionarios.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCadastrarfuncionarios.ForeColor = Color.White;
+            btnCadastrarfuncionarios.Image = Properties.Resources._2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor;
+            btnCadastrarfuncionarios.Location = new Point(509, 85);
+            btnCadastrarfuncionarios.Name = "btnCadastrarfuncionarios";
+            btnCadastrarfuncionarios.Size = new Size(216, 61);
+            btnCadastrarfuncionarios.TabIndex = 7;
+            btnCadastrarfuncionarios.Text = "Cadastrar Funcionarios";
+            btnCadastrarfuncionarios.UseVisualStyleBackColor = false;
+            btnCadastrarfuncionarios.Click += btnCadastrarfuncionarios_Click;
             // 
             // btnSimularPintura
             // 
@@ -152,39 +142,36 @@
             btnSimularPintura.TabIndex = 8;
             btnSimularPintura.Text = "Simular Pinturas";
             btnSimularPintura.UseVisualStyleBackColor = false;
+            btnSimularPintura.Click += btnSimularPintura_Click;
             // 
             // TelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(797, 393);
+            ClientSize = new Size(782, 382);
             Controls.Add(btnSimularPintura);
-            Controls.Add(btnCadastrarmecanicos);
+            Controls.Add(btnCadastrarfuncionarios);
             Controls.Add(btnHistoricoCompras);
             Controls.Add(btnHistoricoPedidos);
             Controls.Add(btnComprarpeca);
             Controls.Add(pictureBox2);
             Controls.Add(btnAdicionarservico);
             Controls.Add(lblTelaPrincipal);
-            Controls.Add(pibTelaPrincipal);
             Name = "TelaPrincipal";
             Text = "TelaPrincipal";
-            ((System.ComponentModel.ISupportInitialize)pibTelaPrincipal).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pibTelaPrincipal;
         private Label lblTelaPrincipal;
         private Button btnAdicionarservico;
         private PictureBox pictureBox2;
         private Button btnComprarpeca;
         private Button btnHistoricoPedidos;
         private Button btnHistoricoCompras;
-        private Button btnCadastrarmecanicos;
+        private Button btnCadastrarfuncionarios;
         private Button btnSimularPintura;
     }
 }

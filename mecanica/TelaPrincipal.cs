@@ -16,5 +16,30 @@ namespace mecanica
         {
             InitializeComponent();
         }
+
+        private void btnAdicionarservico_Click(object sender, EventArgs e)
+        {
+            //Abre a tela Adicionar serviços
+            AdicionarServicos adicionarServicos = new AdicionarServicos();
+            adicionarServicos.Show();
+
+            //Fecha a tela anterior
+            this.Hide();
+        }
+
+        private void btnSimularPintura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastrarfuncionarios_Click(object sender, EventArgs e)
+        {
+            //Abrir a tela Cadastrar Funcionarios
+            CadastroFunionarios cadastroFunionarios = new CadastroFunionarios();
+            cadastroFunionarios.Show();
+
+            //Fechar a tela anterior 
+            this.Hide();
+        }
     }
 }
