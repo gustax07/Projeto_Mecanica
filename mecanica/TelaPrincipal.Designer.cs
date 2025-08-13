@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pibTelaPrincipal = new PictureBox();
             lblTelaPrincipal = new Label();
             btnAdicionarservico = new Button();
             pictureBox2 = new PictureBox();
@@ -37,19 +36,8 @@
             btnHistoricoCompras = new Button();
             btnCadastrarmecanicos = new Button();
             btnSimularPintura = new Button();
-            ((System.ComponentModel.ISupportInitialize)pibTelaPrincipal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // pibTelaPrincipal
-            // 
-            pibTelaPrincipal.Image = Properties.Resources._2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor;
-            pibTelaPrincipal.Location = new Point(-10, -4);
-            pibTelaPrincipal.Name = "pibTelaPrincipal";
-            pibTelaPrincipal.Size = new Size(820, 397);
-            pibTelaPrincipal.SizeMode = PictureBoxSizeMode.Zoom;
-            pibTelaPrincipal.TabIndex = 0;
-            pibTelaPrincipal.TabStop = false;
             // 
             // lblTelaPrincipal
             // 
@@ -76,6 +64,7 @@
             btnAdicionarservico.TabIndex = 2;
             btnAdicionarservico.Text = "Adicionar Serviços";
             btnAdicionarservico.UseVisualStyleBackColor = false;
+            btnAdicionarservico.Click += btnAdicionarservico_Click;
             // 
             // pictureBox2
             // 
@@ -152,12 +141,13 @@
             btnSimularPintura.TabIndex = 8;
             btnSimularPintura.Text = "Simular Pinturas";
             btnSimularPintura.UseVisualStyleBackColor = false;
+            btnSimularPintura.Click += btnSimularPintura_Click;
             // 
             // TelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(797, 393);
+            ClientSize = new Size(782, 382);
             Controls.Add(btnSimularPintura);
             Controls.Add(btnCadastrarmecanicos);
             Controls.Add(btnHistoricoCompras);
@@ -166,18 +156,14 @@
             Controls.Add(pictureBox2);
             Controls.Add(btnAdicionarservico);
             Controls.Add(lblTelaPrincipal);
-            Controls.Add(pibTelaPrincipal);
             Name = "TelaPrincipal";
             Text = "TelaPrincipal";
-            ((System.ComponentModel.ISupportInitialize)pibTelaPrincipal).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pibTelaPrincipal;
         private Label lblTelaPrincipal;
         private Button btnAdicionarservico;
         private PictureBox pictureBox2;

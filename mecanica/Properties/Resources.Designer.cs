@@ -83,7 +83,6 @@ namespace mecanica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap _2370744_tecnologia_fundo_com_um_conceito_mecanico_vetor2 {
             get {
                 object obj = ResourceManager.GetObject("2370744-tecnologia-fundo-com-um-conceito-mecanico-vetor2", resourceCulture);
@@ -94,14 +93,19 @@ namespace mecanica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mechanic__1_ {
-            get {
-                object obj = ResourceManager.GetObject("mechanic (1)", resourceCulture);
-=======
         internal static System.Drawing.Bitmap mecanica {
             get {
                 object obj = ResourceManager.GetObject("mecanica", resourceCulture);
->>>>>>> 0ba05e5402774a0976bc26442aa4f6594ffd2668
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mechanic__1_ {
+            get {
+                object obj = ResourceManager.GetObject("mechanic (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
