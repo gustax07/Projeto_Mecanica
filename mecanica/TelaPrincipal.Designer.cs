@@ -115,6 +115,7 @@
             btnHistoricoCompras.TabIndex = 6;
             btnHistoricoCompras.Text = "Histórico de Compras ";
             btnHistoricoCompras.UseVisualStyleBackColor = false;
+            btnHistoricoCompras.Click += btnHistoricoCompras_Click;
             // 
             // btnCadastrarfuncionarios
             // 
@@ -148,7 +149,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(782, 382);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(759, 348);
             Controls.Add(btnSimularPintura);
             Controls.Add(btnCadastrarfuncionarios);
             Controls.Add(btnHistoricoCompras);

@@ -54,7 +54,12 @@
             txbEdtNome = new TextBox();
             lblEdtVeiculo = new Label();
             lblEdtNome = new Label();
+<<<<<<< HEAD
             dgvServicos = new DataGridView();
+=======
+            dataGridView1 = new DataGridView();
+            btnVoltarAddServiços = new Button();
+>>>>>>> 620f62d5b77383cb75b60637b2fe20cc2331f0ee
             grbAdicionar.SuspendLayout();
             grbEdicao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvServicos).BeginInit();
@@ -315,13 +320,30 @@
             dgvServicos.CellClick += dgvServicos_CellClick;
             dgvServicos.CellContentClick += dgvServicos_CellContentClick;
             // 
+            // btnVoltarAddServiços
+            // 
+            btnVoltarAddServiços.BackColor = SystemColors.ActiveCaption;
+            btnVoltarAddServiços.FlatStyle = FlatStyle.Flat;
+            btnVoltarAddServiços.ForeColor = Color.Red;
+            btnVoltarAddServiços.Location = new Point(12, 12);
+            btnVoltarAddServiços.Name = "btnVoltarAddServiços";
+            btnVoltarAddServiços.Size = new Size(47, 23);
+            btnVoltarAddServiços.TabIndex = 21;
+            btnVoltarAddServiços.Text = "X";
+            btnVoltarAddServiços.UseVisualStyleBackColor = false;
+            // 
             // AdicionarServicos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(824, 627);
+<<<<<<< HEAD
             Controls.Add(dgvServicos);
+=======
+            Controls.Add(btnVoltarAddServiços);
+            Controls.Add(dataGridView1);
+>>>>>>> 620f62d5b77383cb75b60637b2fe20cc2331f0ee
             Controls.Add(grbEdicao);
             Controls.Add(grbAdicionar);
             Controls.Add(lblTitulo);
@@ -364,6 +386,11 @@
         private TextBox txbEdtNome;
         private Label lblEdtVeiculo;
         private Label lblEdtNome;
+<<<<<<< HEAD
         private DataGridView dgvServicos;
+=======
+        private DataGridView dataGridView1;
+        private Button btnVoltarAddServiços;
+>>>>>>> 620f62d5b77383cb75b60637b2fe20cc2331f0ee
     }
 }

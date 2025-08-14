@@ -73,6 +73,7 @@ namespace mecanica
                 servico.Orcamento = double.Parse(txbOrcamento.Text);
                 servico.Status = txbStatus.Text;
 
+<<<<<<< HEAD
                 if (servico.Adicionar())
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso!",
@@ -195,6 +196,14 @@ namespace mecanica
             txbEdtStatus.Text = this.servico.Status;
             //Ativar grbEdicao:
             grbEdicao.Enabled = true;
+=======
+
+        }
+
+        private void btnVoltarAddServiços_Click(object sender, EventArgs e)
+        {
+            
+>>>>>>> 620f62d5b77383cb75b60637b2fe20cc2331f0ee
         }
     }
 

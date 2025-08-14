@@ -12,7 +12,7 @@ namespace mecanica.Model
         public int Id { get; set; }
         public string NomeCompleto { get; set; }
 
-        public DataTable DataContratacao { get; set; }
+        public DateTime DataContratacao { get; set; }
         public string Email { get; set; }
 
         public string Senha { get; set; }

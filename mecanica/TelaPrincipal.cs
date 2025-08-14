@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mecanica.Model;
 
 namespace mecanica
 {
     public partial class TelaPrincipal : Form
     {
-        public TelaPrincipal()
+        Funcionario funcionario = new Funcionario();
+        public TelaPrincipal(Funcionario funcionario)
         {
             InitializeComponent();
+            this.funcionario = funcionario;
         }
 
         private void btnAdicionarservico_Click(object sender, EventArgs e)
@@ -35,11 +38,18 @@ namespace mecanica
         private void btnCadastrarfuncionarios_Click(object sender, EventArgs e)
         {
             //Abrir a tela Cadastrar Funcionarios
-            CadastroFunionarios cadastroFunionarios = new CadastroFunionarios();
+            CadastroFunionarios cadastroFunionarios = new CadastroFunionarios(funcionario);
             cadastroFunionarios.Show();
 
             //Fechar a tela anterior 
             this.Hide();
+        }
+
+        private void btnHistoricoCompras_Click(object sender, EventArgs e)
+        {
+            HistoricoCompras historico = new HistoricoCompras(); // passa referência
+            historico.Show();
+            this.Hide(); // esconde TelaPrincipal
         }
     }
 }
