@@ -115,6 +115,7 @@
             btnHistoricoCompras.TabIndex = 6;
             btnHistoricoCompras.Text = "Histórico de Compras ";
             btnHistoricoCompras.UseVisualStyleBackColor = false;
+            btnHistoricoCompras.Click += btnHistoricoCompras_Click;
             // 
             // btnCadastrarfuncionarios
             // 

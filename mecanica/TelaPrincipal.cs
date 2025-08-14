@@ -44,5 +44,12 @@ namespace mecanica
             //Fechar a tela anterior 
             this.Hide();
         }
+
+        private void btnHistoricoCompras_Click(object sender, EventArgs e)
+        {
+            HistoricoCompras historico = new HistoricoCompras(); // passa referência
+            historico.Show();
+            this.Hide(); // esconde TelaPrincipal
+        }
     }
 }
