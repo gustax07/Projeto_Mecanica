@@ -182,6 +182,7 @@
             btnEditar.TabIndex = 11;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // txbEditarSenha
             // 
@@ -262,6 +263,7 @@
             dgvCadastroFunci.Name = "dgvCadastroFunci";
             dgvCadastroFunci.Size = new Size(524, 609);
             dgvCadastroFunci.TabIndex = 12;
+            dgvCadastroFunci.CellClick += dgvCadastroFunci_CellClick;
             // 
             // CadastroFunionarios
             // 
