@@ -18,9 +18,9 @@ namespace mecanica.Model
 
         public int Id { get; set; }
         public string nomeServico { get; set; }
-        public DataTable DataEntrega { get; set; }
+        public DateTime DataEntrega { get; set; }
         public string Veiculo {  get; set; }
-        public int Orcamento { get; set; }
+        public double Orcamento { get; set; }
         public string Status {  get; set; }
 
 

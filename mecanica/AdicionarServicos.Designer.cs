@@ -43,7 +43,7 @@
             lblVeiculo = new Label();
             lblNomeServico = new Label();
             grbEdicao = new GroupBox();
-            button1 = new Button();
+            btnEditar = new Button();
             txbEdtStatus = new TextBox();
             lblEdtStatus = new Label();
             txbEdtOrcamento = new TextBox();
@@ -54,10 +54,10 @@
             txbEdtNome = new TextBox();
             lblEdtVeiculo = new Label();
             lblEdtNome = new Label();
-            dataGridView1 = new DataGridView();
+            dgvServicos = new DataGridView();
             grbAdicionar.SuspendLayout();
             grbEdicao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServicos).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -191,7 +191,7 @@
             // 
             // grbEdicao
             // 
-            grbEdicao.Controls.Add(button1);
+            grbEdicao.Controls.Add(btnEditar);
             grbEdicao.Controls.Add(txbEdtStatus);
             grbEdicao.Controls.Add(lblEdtStatus);
             grbEdicao.Controls.Add(txbEdtOrcamento);
@@ -209,16 +209,17 @@
             grbEdicao.TabStop = false;
             grbEdicao.Text = "Edição";
             // 
-            // button1
+            // btnEditar
             // 
-            button1.BackColor = Color.Black;
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(205, 197);
-            button1.Name = "button1";
-            button1.Size = new Size(97, 30);
-            button1.TabIndex = 10;
-            button1.Text = "Editar";
-            button1.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.Black;
+            btnEditar.ForeColor = SystemColors.ControlLightLight;
+            btnEditar.Location = new Point(205, 197);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(97, 30);
+            btnEditar.TabIndex = 10;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click_1;
             // 
             // txbEdtStatus
             // 
@@ -304,13 +305,15 @@
             lblEdtNome.TabIndex = 0;
             lblEdtNome.Text = "Nome do Serviço:";
             // 
-            // dataGridView1
+            // dgvServicos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 369);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(809, 246);
-            dataGridView1.TabIndex = 3;
+            dgvServicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvServicos.Location = new Point(12, 369);
+            dgvServicos.Name = "dgvServicos";
+            dgvServicos.Size = new Size(809, 246);
+            dgvServicos.TabIndex = 3;
+            dgvServicos.CellClick += dgvServicos_CellClick;
+            dgvServicos.CellContentClick += dgvServicos_CellContentClick;
             // 
             // AdicionarServicos
             // 
@@ -318,7 +321,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(824, 627);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvServicos);
             Controls.Add(grbEdicao);
             Controls.Add(grbAdicionar);
             Controls.Add(lblTitulo);
@@ -329,7 +332,7 @@
             grbAdicionar.PerformLayout();
             grbEdicao.ResumeLayout(false);
             grbEdicao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServicos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -350,7 +353,7 @@
         private TextBox txbOrcamento;
         private Label lblOrcamento;
         private GroupBox grbEdicao;
-        private Button button1;
+        private Button btnEditar;
         private TextBox txbEdtStatus;
         private Label lblEdtStatus;
         private TextBox txbEdtOrcamento;
@@ -361,6 +364,6 @@
         private TextBox txbEdtNome;
         private Label lblEdtVeiculo;
         private Label lblEdtNome;
-        private DataGridView dataGridView1;
+        private DataGridView dgvServicos;
     }
 }
