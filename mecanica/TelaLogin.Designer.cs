@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             lblLogin = new Label();
             lblEmail = new Label();
             lblSenha = new Label();
@@ -82,6 +83,7 @@
             // 
             // btnEntrar
             // 
+            btnEntrar.BackColor = SystemColors.ActiveBorder;
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Monospac821 BT", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEntrar.Location = new Point(87, 302);
@@ -89,13 +91,14 @@
             btnEntrar.Size = new Size(124, 43);
             btnEntrar.TabIndex = 5;
             btnEntrar.Text = "Entrar";
-            btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.UseVisualStyleBackColor = false;
             btnEntrar.Click += btnEntrar_Click;
             // 
             // TelaLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(294, 390);
             Controls.Add(btnEntrar);
             Controls.Add(txbSenha);
@@ -104,6 +107,7 @@
             Controls.Add(lblEmail);
             Controls.Add(lblLogin);
             Font = new Font("SuperFrench", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TelaLogin";
             Text = "Login";
             ResumeLayout(false);

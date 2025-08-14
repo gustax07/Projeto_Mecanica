@@ -50,7 +50,7 @@ namespace mecanica
                 MessageBox.Show("Por favor, informe o veiculo!", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(txbOrcamento.Text == "")
+            else if (txbOrcamento.Text == "")
             {
                 MessageBox.Show("Por favor, informe o orçamento!", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,8 +61,12 @@ namespace mecanica
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-       
-   }
-        
+
+        }
+
+        private void btnVoltarAddServiços_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

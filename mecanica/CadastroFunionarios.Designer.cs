@@ -51,6 +51,7 @@
             txbEditarNome = new TextBox();
             lblEditarNome = new Label();
             dgvCadastroFunci = new DataGridView();
+            btnVoltarCadFunci = new Button();
             grbEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCadastroFunci).BeginInit();
             SuspendLayout();
@@ -263,12 +264,25 @@
             dgvCadastroFunci.Size = new Size(524, 609);
             dgvCadastroFunci.TabIndex = 12;
             // 
+            // btnVoltarCadFunci
+            // 
+            btnVoltarCadFunci.BackColor = SystemColors.ActiveCaption;
+            btnVoltarCadFunci.FlatStyle = FlatStyle.Flat;
+            btnVoltarCadFunci.ForeColor = Color.Red;
+            btnVoltarCadFunci.Location = new Point(12, 20);
+            btnVoltarCadFunci.Name = "btnVoltarCadFunci";
+            btnVoltarCadFunci.Size = new Size(47, 23);
+            btnVoltarCadFunci.TabIndex = 21;
+            btnVoltarCadFunci.Text = "X";
+            btnVoltarCadFunci.UseVisualStyleBackColor = false;
+            // 
             // CadastroFunionarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(916, 727);
+            Controls.Add(btnVoltarCadFunci);
             Controls.Add(dgvCadastroFunci);
             Controls.Add(btnCadastrar);
             Controls.Add(txbSenha);
@@ -316,5 +330,6 @@
         private Label lblEditarContratacao;
         private DataGridView dgvCadastroFunci;
         private Button btnEditar;
+        private Button btnVoltarCadFunci;
     }
 }
