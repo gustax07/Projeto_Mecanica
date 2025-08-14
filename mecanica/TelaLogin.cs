@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mecanica.Model;
 
 namespace mecanica
 {
@@ -19,12 +20,14 @@ namespace mecanica
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string email = txbEmail.Text.Trim();
-            string senha = txbSenha.Text.Trim();
+            Funcionario funcionario = new Funcionario();
 
-            if (email == "admin@admin.com" && senha == "admin")
+            funcionario.Email = txbEmail.Text.Trim();
+            funcionario.Senha = txbSenha.Text.Trim();
+
+            if (funcionario.Email == "admin@admin.com" && funcionario.Senha == "admin")
             {
-                TelaPrincipal tela = new TelaPrincipal();
+                TelaPrincipal tela = new TelaPrincipal(funcionario);
                 tela.Show();
                 this.Hide();
             }

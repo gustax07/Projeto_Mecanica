@@ -55,6 +55,7 @@
             lblEdtVeiculo = new Label();
             lblEdtNome = new Label();
             dataGridView1 = new DataGridView();
+            btnVoltarAddServiços = new Button();
             grbAdicionar.SuspendLayout();
             grbEdicao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -312,12 +313,25 @@
             dataGridView1.Size = new Size(809, 246);
             dataGridView1.TabIndex = 3;
             // 
+            // btnVoltarAddServiços
+            // 
+            btnVoltarAddServiços.BackColor = SystemColors.ActiveCaption;
+            btnVoltarAddServiços.FlatStyle = FlatStyle.Flat;
+            btnVoltarAddServiços.ForeColor = Color.Red;
+            btnVoltarAddServiços.Location = new Point(12, 12);
+            btnVoltarAddServiços.Name = "btnVoltarAddServiços";
+            btnVoltarAddServiços.Size = new Size(47, 23);
+            btnVoltarAddServiços.TabIndex = 21;
+            btnVoltarAddServiços.Text = "X";
+            btnVoltarAddServiços.UseVisualStyleBackColor = false;
+            // 
             // AdicionarServicos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(824, 627);
+            Controls.Add(btnVoltarAddServiços);
             Controls.Add(dataGridView1);
             Controls.Add(grbEdicao);
             Controls.Add(grbAdicionar);
@@ -362,5 +376,6 @@
         private Label lblEdtVeiculo;
         private Label lblEdtNome;
         private DataGridView dataGridView1;
+        private Button btnVoltarAddServiços;
     }
 }
