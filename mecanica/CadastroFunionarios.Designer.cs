@@ -41,16 +41,16 @@
             btnCadastrar = new Button();
             grbCadastro = new GroupBox();
             grbEditar = new GroupBox();
-            txbEditarNome = new TextBox();
-            lblEditarNome = new Label();
-            txbEditarContratacao = new TextBox();
-            lblEditarContratacao = new Label();
-            txbEditarEmail = new TextBox();
-            lblEditarEmail = new Label();
+            btnEditar = new Button();
             txbEditarSenha = new TextBox();
             lblEditarSenha = new Label();
+            txbEditarEmail = new TextBox();
+            lblEditarEmail = new Label();
+            txbEditarContratacao = new TextBox();
+            lblEditarContratacao = new Label();
+            txbEditarNome = new TextBox();
+            lblEditarNome = new Label();
             dgvCadastroFunci = new DataGridView();
-            btnEditar = new Button();
             grbEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCadastroFunci).BeginInit();
             SuspendLayout();
@@ -145,6 +145,7 @@
             btnCadastrar.TabIndex = 9;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // grbCadastro
             // 
@@ -173,59 +174,14 @@
             grbEditar.TabStop = false;
             grbEditar.Text = "Edição";
             // 
-            // txbEditarNome
+            // btnEditar
             // 
-            txbEditarNome.Location = new Point(170, 47);
-            txbEditarNome.Multiline = true;
-            txbEditarNome.Name = "txbEditarNome";
-            txbEditarNome.Size = new Size(137, 23);
-            txbEditarNome.TabIndex = 4;
-            // 
-            // lblEditarNome
-            // 
-            lblEditarNome.AutoSize = true;
-            lblEditarNome.Font = new Font("Segoe UI", 12F);
-            lblEditarNome.Location = new Point(13, 47);
-            lblEditarNome.Name = "lblEditarNome";
-            lblEditarNome.Size = new Size(125, 21);
-            lblEditarNome.TabIndex = 3;
-            lblEditarNome.Text = "Nome completo:";
-            // 
-            // txbEditarContratacao
-            // 
-            txbEditarContratacao.Location = new Point(170, 89);
-            txbEditarContratacao.Multiline = true;
-            txbEditarContratacao.Name = "txbEditarContratacao";
-            txbEditarContratacao.Size = new Size(137, 23);
-            txbEditarContratacao.TabIndex = 6;
-            // 
-            // lblEditarContratacao
-            // 
-            lblEditarContratacao.AutoSize = true;
-            lblEditarContratacao.Font = new Font("Segoe UI", 12F);
-            lblEditarContratacao.Location = new Point(13, 89);
-            lblEditarContratacao.Name = "lblEditarContratacao";
-            lblEditarContratacao.Size = new Size(151, 21);
-            lblEditarContratacao.TabIndex = 5;
-            lblEditarContratacao.Text = "Data de contratação:";
-            // 
-            // txbEditarEmail
-            // 
-            txbEditarEmail.Location = new Point(92, 130);
-            txbEditarEmail.Multiline = true;
-            txbEditarEmail.Name = "txbEditarEmail";
-            txbEditarEmail.Size = new Size(137, 23);
-            txbEditarEmail.TabIndex = 8;
-            // 
-            // lblEditarEmail
-            // 
-            lblEditarEmail.AutoSize = true;
-            lblEditarEmail.Font = new Font("Segoe UI", 12F);
-            lblEditarEmail.Location = new Point(13, 132);
-            lblEditarEmail.Name = "lblEditarEmail";
-            lblEditarEmail.Size = new Size(51, 21);
-            lblEditarEmail.TabIndex = 7;
-            lblEditarEmail.Text = "Email:";
+            btnEditar.Location = new Point(13, 222);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(125, 37);
+            btnEditar.TabIndex = 11;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
             // 
             // txbEditarSenha
             // 
@@ -245,6 +201,60 @@
             lblEditarSenha.TabIndex = 9;
             lblEditarSenha.Text = "Senha:";
             // 
+            // txbEditarEmail
+            // 
+            txbEditarEmail.Location = new Point(92, 130);
+            txbEditarEmail.Multiline = true;
+            txbEditarEmail.Name = "txbEditarEmail";
+            txbEditarEmail.Size = new Size(137, 23);
+            txbEditarEmail.TabIndex = 8;
+            // 
+            // lblEditarEmail
+            // 
+            lblEditarEmail.AutoSize = true;
+            lblEditarEmail.Font = new Font("Segoe UI", 12F);
+            lblEditarEmail.Location = new Point(13, 132);
+            lblEditarEmail.Name = "lblEditarEmail";
+            lblEditarEmail.Size = new Size(51, 21);
+            lblEditarEmail.TabIndex = 7;
+            lblEditarEmail.Text = "Email:";
+            // 
+            // txbEditarContratacao
+            // 
+            txbEditarContratacao.Location = new Point(170, 89);
+            txbEditarContratacao.Multiline = true;
+            txbEditarContratacao.Name = "txbEditarContratacao";
+            txbEditarContratacao.Size = new Size(137, 23);
+            txbEditarContratacao.TabIndex = 6;
+            // 
+            // lblEditarContratacao
+            // 
+            lblEditarContratacao.AutoSize = true;
+            lblEditarContratacao.Font = new Font("Segoe UI", 12F);
+            lblEditarContratacao.Location = new Point(13, 89);
+            lblEditarContratacao.Name = "lblEditarContratacao";
+            lblEditarContratacao.Size = new Size(151, 21);
+            lblEditarContratacao.TabIndex = 5;
+            lblEditarContratacao.Text = "Data de contratação:";
+            // 
+            // txbEditarNome
+            // 
+            txbEditarNome.Location = new Point(170, 47);
+            txbEditarNome.Multiline = true;
+            txbEditarNome.Name = "txbEditarNome";
+            txbEditarNome.Size = new Size(137, 23);
+            txbEditarNome.TabIndex = 4;
+            // 
+            // lblEditarNome
+            // 
+            lblEditarNome.AutoSize = true;
+            lblEditarNome.Font = new Font("Segoe UI", 12F);
+            lblEditarNome.Location = new Point(13, 47);
+            lblEditarNome.Name = "lblEditarNome";
+            lblEditarNome.Size = new Size(125, 21);
+            lblEditarNome.TabIndex = 3;
+            lblEditarNome.Text = "Nome completo:";
+            // 
             // dgvCadastroFunci
             // 
             dgvCadastroFunci.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -252,15 +262,6 @@
             dgvCadastroFunci.Name = "dgvCadastroFunci";
             dgvCadastroFunci.Size = new Size(524, 609);
             dgvCadastroFunci.TabIndex = 12;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(13, 222);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(125, 37);
-            btnEditar.TabIndex = 11;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
             // 
             // CadastroFunionarios
             // 
