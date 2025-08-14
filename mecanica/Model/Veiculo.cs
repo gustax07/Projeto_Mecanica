@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MySqlConnector;
 using System.Threading.Tasks;
+using EasyEncryption;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace mecanica.Model
 {
-    internal class Veiculo
+    public class Veiculo
     {
         public int Id { get; set; }
         public string Marca { get; set; }
@@ -14,5 +17,107 @@ namespace mecanica.Model
         public string Placa { get; set; }
         public string Cor {  get; set; }  
         public int Id_orcamento { get; set; }  
+
+        public bool Cadastrar()
+        {
+            string comando = "INSERT INTO veiculo (marca, modelo, placa, cor, id_orcamento) " +
+                "VALUES (@marca, @modelo, @placa, @cor, @id_orcamento)";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@marca", Marca);
+            cmd.Parameters.AddWithValue("@modelo", Modelo);
+            cmd.Parameters.AddWithValue("@placa", Placa);
+            cmd.Parameters.AddWithValue("@cor", Cor);
+            cmd.Parameters.AddWithValue("@id_orcamento", Id_orcamento);
+
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
+
+        public bool Excluir()
+        {
+            string comando = "DELETE FROM veiculo WHERE id = @id";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@id", Id);
+
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
+
+        public bool Modificar()
+        {
+            string comando = "UPDATE veiculo SET marca = @marca, modelo = @modelo, placa = @placa, cor = @cor, " +
+                "id_orcamento = @id_orcamento WHERE id = @id"
+                ;
+
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@marca", Marca);
+            cmd.Parameters.AddWithValue("@modelo", Modelo);
+            cmd.Parameters.AddWithValue("@placa", Placa);
+            cmd.Parameters.AddWithValue("@cor", Cor);
+            cmd.Parameters.AddWithValue("@id_orcamento", Id_orcamento);
+            
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
     }
 }
