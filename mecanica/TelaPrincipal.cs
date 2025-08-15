@@ -24,10 +24,12 @@ namespace mecanica
         {
             //Abre a tela Adicionar serviços
             AdicionarServicos adicionarServicos = new AdicionarServicos();
-            adicionarServicos.Show();
+            
 
             //Fecha a tela anterior
             this.Hide();
+            adicionarServicos.ShowDialog();
+            this.Show();
         }
 
         private void btnSimularPintura_Click(object sender, EventArgs e)
@@ -39,17 +41,22 @@ namespace mecanica
         {
             //Abrir a tela Cadastrar Funcionarios
             CadastroFunionarios cadastroFunionarios = new CadastroFunionarios(funcionario);
-            cadastroFunionarios.Show();
+            
 
             //Fechar a tela anterior 
             this.Hide();
+            cadastroFunionarios.ShowDialog();
+            this.Show();
+
         }
 
         private void btnHistoricoCompras_Click(object sender, EventArgs e)
         {
             HistoricoCompras historico = new HistoricoCompras(); // passa referência
-            historico.Show();
+           
             this.Hide(); // esconde TelaPrincipal
+            historico.ShowDialog();
+            this.Show();
         }
     }
 }
