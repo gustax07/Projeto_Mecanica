@@ -15,13 +15,12 @@ namespace mecanica.Model
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Placa { get; set; }
-        public string Cor {  get; set; }  
-        public int Id_orcamento { get; set; }  
+        public string Cor {  get; set; }    
 
         public bool Cadastrar()
         {
-            string comando = "INSERT INTO veiculo (marca, modelo, placa, cor, id_orcamento) " +
-                "VALUES (@marca, @modelo, @placa, @cor, @id_orcamento)";
+            string comando = "INSERT INTO veiculo (marca, modelo, placa, cor) " +
+                "VALUES (@marca, @modelo, @placa, @cor)";
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
@@ -30,7 +29,6 @@ namespace mecanica.Model
             cmd.Parameters.AddWithValue("@modelo", Modelo);
             cmd.Parameters.AddWithValue("@placa", Placa);
             cmd.Parameters.AddWithValue("@cor", Cor);
-            cmd.Parameters.AddWithValue("@id_orcamento", Id_orcamento);
 
             cmd.Prepare();
             try
@@ -85,8 +83,8 @@ namespace mecanica.Model
 
         public bool Modificar()
         {
-            string comando = "UPDATE veiculo SET marca = @marca, modelo = @modelo, placa = @placa, cor = @cor, " +
-                "id_orcamento = @id_orcamento WHERE id = @id"
+            string comando = "UPDATE veiculo SET marca = @marca, modelo = @modelo, placa = @placa, cor = @cor " +
+                " WHERE id = @id"
                 ;
 
             Banco conexaoBD = new Banco();
@@ -97,7 +95,6 @@ namespace mecanica.Model
             cmd.Parameters.AddWithValue("@modelo", Modelo);
             cmd.Parameters.AddWithValue("@placa", Placa);
             cmd.Parameters.AddWithValue("@cor", Cor);
-            cmd.Parameters.AddWithValue("@id_orcamento", Id_orcamento);
             
             cmd.Prepare();
             try
