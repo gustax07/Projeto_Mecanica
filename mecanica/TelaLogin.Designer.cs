@@ -78,6 +78,7 @@
             // 
             txbSenha.Location = new Point(59, 244);
             txbSenha.Name = "txbSenha";
+            txbSenha.PasswordChar = '*';
             txbSenha.Size = new Size(176, 23);
             txbSenha.TabIndex = 4;
             // 

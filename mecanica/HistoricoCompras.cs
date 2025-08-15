@@ -13,8 +13,7 @@ namespace mecanica
 {
     public partial class HistoricoCompras : Form
     {
-        //Variaveis globais:
-        Model.Orcamento orcamento = new Orcamento();
+        
 
         public HistoricoCompras()
         {
