@@ -29,6 +29,7 @@ namespace mecanica
             //Fecha a tela anterior
             this.Hide();
             adicionarServicos.ShowDialog();
+            this.Show();
         }
 
         private void btnSimularPintura_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace mecanica
            
             this.Hide(); // esconde TelaPrincipal
             historico.ShowDialog();
+            this.Show();
         }
     }
 }
